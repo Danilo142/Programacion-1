@@ -27,7 +27,7 @@ class Proveedor(Resource):
 
     def delete(self, id):
         if int(id) in PROVEEDORES:
-            del PROVEEDORES[id]
+            del PROVEEDORES[int(id)]
             return '', 204
         return '', 404
 
