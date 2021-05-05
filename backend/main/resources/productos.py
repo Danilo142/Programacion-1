@@ -1,5 +1,6 @@
 from flask_restful import Resource
 from flask import request
+# from main.models import ProductoModel
 
 PRODUCTOS = {
     1: {'primer producto': '1er producto'},
@@ -28,4 +29,12 @@ class Producto(Resource):
         if int(id) in PRODUCTOS:
             del PRODUCTOS[int(id)]
             return '', 204
+        return '', 404
+
+    def put(self, id):
+        if int(id) in PRODUCTOS:
+            producto = PRODUCTOS[int(id)]
+            data = request.get_json()
+            producto.update(data)
+            return producto, 201
         return '', 404

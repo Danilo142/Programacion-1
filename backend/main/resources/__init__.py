@@ -14,3 +14,5 @@ from .clientes import Clientes as ClientesResource
 from .clientes import Cliente as ClienteResource
 from .proveedores import Proveedores as ProveedoresResource
 from .proveedores import Proveedor as ProveedorResource
+from .productobolson import ProductosBolsones as ProductosBolsonesResource
+from .productobolson import ProductoBolson as ProductoBolsonResource
